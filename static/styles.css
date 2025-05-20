@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2F4F4F 0%, #DCDCDC 100%); /* Deep Slate Gray to Silver Mist */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    height: 90vh;
+    background-color: #FFFFFF; /* Blanc pur pour un contraste propre */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombre légèrement plus prononcée */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(90deg, #1E3A8A 0%, #2F4F4F 100%); /* Rich Navy Blue to Deep Slate Gray */
+    color: #FFFFFF; /* Texte blanc pour contraste */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 14px;
+    opacity: 0.9; /* Légère transparence pour un effet subtil */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.welcome-message {
+    background-color: #DCDCDC; /* Silver Mist pour une apparence moderne */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.welcome-message h2 {
+    color: #1E3A8A; /* Rich Navy Blue pour les titres */
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-message {
+    align-items: flex-end;
+}
+
+.ai-message {
+    align-items: flex-start;
+}
+
+.message-content {
+    padding: 12px 16px;
+    border-radius: 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message .message-content {
+    background-color: #8B7E74; /* Warm Taupe pour les messages utilisateur */
+    color: #FFFFFF; /* Texte blanc pour contraste */
+    border-bottom-right-radius: 5px;
+}
+
+.ai-message .message-content {
+    background-color: #DCDCDC; /* Silver Mist pour les messages IA */
+    color: #4A4A4A; /* Soft Charcoal pour le texte */
+    border-bottom-left-radius: 5px;
+}
+
+.message-time {
+    font-size: 12px;
+    color: #4A4A4A; /* Soft Charcoal pour l'heure */
+    margin-top: 5px;
+}
+
+.input-container {
+    display: flex;
+    padding: 15px;
+    background-color: #DCDCDC; /* Silver Mist pour la barre d'entrée */
+    border-top: 1px solid #4A4A4A; /* Soft Charcoal pour la bordure */
+}
+
+#userInput {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #4A4A4A; /* Soft Charcoal pour la bordure */
+    border-radius: 25px;
+    font-size: 14px;
+    resize: none;
+    height: 50px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#userInput:focus {
+    border-color: #1E3A8A; /* Rich Navy Blue pour le focus */
+}
+
+#sendButton {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background: linear-gradient(90deg, #1E3A8A 0%, #2F4F4F 100%); /* Rich Navy Blue to Deep Slate Gray */
+    color: #FFFFFF; /* Texte blanc */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+#sendButton:hover {
+    transform: scale(1.05);
+}
+
+#sendButton:active {
+    transform: scale(0.95);
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #4A4A4A; /* Soft Charcoal pour le texte */
+    background-color: #DCDCDC; /* Silver Mist pour le fond */
+    border-top: 1px solid #4A4A4A; /* Soft Charcoal pour la bordure */
+}
+
+/* Animation de chargement */
+.typing-indicator {
+    display: flex;
+    padding: 12px 16px;
+    background-color: #DCDCDC; /* Silver Mist */
+    border-radius: 18px;
+    border-bottom-left-radius: 5px;
+    width: fit-content;
+}
+
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    background-color: #1E3A8A; /* Rich Navy Blue pour les points */
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Style pour le markdown */
+.markdown-content {
+    line-height: 1.6;
+}
+
+.markdown-content p {
+    margin-bottom: 10px;
+}
+
+.markdown-content h1, .markdown-content h2, .markdown-content h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #1E3A8A; /* Rich Navy Blue pour les titres */
+}
+
+.markdown-content code {
+    background-color: #F0F0F5; /* Gris très clair pour le code */
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.markdown-content pre {
+    background-color: #F0F0F5; /* Gris très clair */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+.markdown-content ul, .markdown-content ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #4A4A4A; /* Soft Charcoal */
+}
