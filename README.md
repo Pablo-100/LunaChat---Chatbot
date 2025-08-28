@@ -136,7 +136,7 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de
 
 ## 👨‍💻 Auteurs
 
-- **TBINI & AMRI** - *Développement initial* - ING-3-J-G
+- **TBINI Mustapha Amin** - *Développement initial* - ING-3-J-G
 
 ## 🙏 Remerciements
 
@@ -149,4 +149,4 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de
 
 ---
 
-*Développé avec ❤️ par TBINI & AMRI*
+*Développé avec ❤️ par TBINI*
